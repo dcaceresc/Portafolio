@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { JobVM } from 'src/app/shared/models/jobVM';
-import { JobService } from 'src/app/core/services/job.service';
+import { JobService } from '../../../core/services/job.service';
+import { Job } from '../../../core/models/job.model';
 
 @Component({
   selector: 'app-jobs',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './jobs.component.html',
-  styleUrls: ['./jobs.component.scss']
+  styleUrl: './jobs.component.scss'
 })
 export class JobsComponent {
   active = 1
-  jobsData : JobVM[] = [];
+  jobsData : Job[] = [];
 
   constructor(private jobService:JobService) {
-    jobService.getAllJobsData().subscribe((contents: JobVM[]) => {
+    jobService.getAllJobsData().subscribe((contents: Job[]) => {
 
       this.jobsData = contents;
     });

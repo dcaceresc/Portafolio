@@ -1,47 +1,48 @@
 <section id="jobs" #revealContainer>
-  <h2 class="numbered-heading">
-    <span>02.</span> Experiencia
-  </h2>
-
-  <div class="inner">
-    <div role="tablist" aria-label="Job tabs" (keydown)="onKeyDown($event)">
-      <ng-container *ngFor="let job of jobsData; let i = index">
-        <button
-          class="tab-button"
-          [class.active]="activeTabId === i"
-          (click)="setActiveTabId(i)"
-          #tabButton
-          [id]="'tab-' + i"
-          role="tab"
-          [attr.tabindex]="activeTabId === i ? '0' : '-1'"
-          [attr.aria-selected]="activeTabId === i"
-          [attr.aria-controls]="'panel-' + i"
-        >
-          <span>{{ job.frontmatter.company }}</span>
-        </button>
-      </ng-container>
-      <div class="highlight" [style.transform]="'translateY(' + activeTabId * 40 + 'px)'"></div>
+    <h2 class="numbered-heading">
+      <span>02.</span> Experiencia
+    </h2>
+  
+    <div class="inner">
+      <div role="tablist" aria-label="Job tabs" (keydown)="onKeyDown($event)">
+        <ng-container *ngFor="let job of jobsData; let i = index">
+          <button
+            class="tab-button"
+            [class.active]="activeTabId === i"
+            (click)="setActiveTabId(i)"
+            #tabButton
+            [id]="'tab-' + i"
+            role="tab"
+            [attr.tabindex]="activeTabId === i ? '0' : '-1'"
+            [attr.aria-selected]="activeTabId === i"
+            [attr.aria-controls]="'panel-' + i"
+          >
+            <span>{{ job.frontmatter.company }}</span>
+          </button>
+        </ng-container>
+        <div class="highlight" [style.transform]="'translateY(' + activeTabId * 40 + 'px)'"></div>
+      </div>
+  
+      <div class="tab-panels">
+        <ng-container *ngFor="let job of jobsData; let i = index">
+          <div
+            class="tab-panel"
+            [hidden]="activeTabId !== i"
+            [attr.aria-labelledby]="'tab-' + i"
+            [attr.aria-hidden]="activeTabId !== i"
+          >
+            <h3>
+              <span>{{ job.frontmatter.title }}</span>
+              <span class="company">
+                &nbsp;&#64;&nbsp;
+                <a href="https:\\{{ job.frontmatter.url }}" class="inline-link">{{ job.frontmatter.company }}</a>
+              </span>
+            </h3>
+            <p class="range">{{ job.frontmatter.range }}</p>
+            <div [innerHTML]="job.contentHtml"></div>
+          </div>
+        </ng-container>
+      </div>
     </div>
-
-    <div class="tab-panels">
-      <ng-container *ngFor="let job of jobsData; let i = index">
-        <div
-          class="tab-panel"
-          [hidden]="activeTabId !== i"
-          [attr.aria-labelledby]="'tab-' + i"
-          [attr.aria-hidden]="activeTabId !== i"
-        >
-          <h3>
-            <span>{{ job.frontmatter.title }}</span>
-            <span class="company">
-              &nbsp;@&nbsp;
-              <a href="https:\\{{ job.frontmatter.url }}" class="inline-link">{{ job.frontmatter.company }}</a>
-            </span>
-          </h3>
-          <p class="range">{{ job.frontmatter.range }}</p>
-          <div [innerHTML]="job.contentHtml"></div>
-        </div>
-      </ng-container>
-    </div>
-  </div>
-</section>
+  </section>
+  

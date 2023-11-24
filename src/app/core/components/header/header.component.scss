@@ -1,0 +1,70 @@
+@import './../../../../variables.scss';
+
+header{
+    top:0;
+    padding: 0px 50px;
+    height: $nav-height;
+    width: 100%;
+    position:fixed;
+    transition: $transition;
+  }
+  
+  
+  
+  nav{
+      position:relative;
+      width: 100%;
+      color: $lightest-slate;
+      font-family: $font-mono;
+  
+      ul{
+  
+        padding: 0px;
+        margin: 0px;
+  
+        li{
+          margin:0px 5px;
+          position:relative;
+          font-size: $fz-sm;
+  
+  
+          a{
+              color:inherit;
+  
+              &:hover{
+                color:$green;
+              }
+  
+            span{
+  
+              color:$green;
+  
+            }
+  
+  
+  
+          }
+        }
+  
+      }
+  }
+  
+  
+  .resume-button{
+    color:$green !important;
+    background-color: transparent;
+    border: 1px solid $green;
+    border-radius: $border-radius;
+    padding: 0.75rem 1rem;
+    font-family: $font-mono;
+    line-height: 1;
+    text-decoration: none;
+    transition: $transition;
+  
+  
+    &:hover{
+      transform: translate(-3px, -3px);
+      box-shadow: 3px 3px 0px #64ffda;
+    }
+  }
+  

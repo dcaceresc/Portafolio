@@ -1,62 +1,64 @@
-@import '/src/variables.scss';
+@import '../../../../variables';
+
 
 section{
-  max-width: 900px;
-
-  .text{
-    font-family: $font-sans;
-    font-size: $fz-lg;
-
-
-    ul.skills-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(140px, 200px));
-      grid-gap: 0 10px;
-      padding: 0;
-      margin: 20px 0 0 0;
-      overflow: hidden;
-      list-style: none;
-
-      li {
-        position: relative;
-        margin-bottom: 10px;
-        padding-left: 20px;
-        font-family: $font-mono;
-        font-size: $fz-xs;
-
-        &:before {
-          content: '▹';
-          position: absolute;
-          left: 0;
-          color: $green;
-          font-size: $fz-sm;
-          line-height: 15px;
+    max-width: 900px;
+  
+    .text{
+      font-family: $font-sans;
+      font-size: $fz-lg;
+  
+  
+      ul.skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 200px));
+        grid-gap: 0 10px;
+        padding: 0;
+        margin: 20px 0 0 0;
+        overflow: hidden;
+        list-style: none;
+  
+        li {
+          position: relative;
+          margin-bottom: 10px;
+          padding-left: 20px;
+          font-family: $font-mono;
+          font-size: $fz-xs;
+  
+          &:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: $green;
+            font-size: $fz-sm;
+            line-height: 15px;
+          }
         }
       }
     }
-  }
-
-  .img-container{
-      width: 324px;
-      margin:auto;
-
-        &:after{
-          content: '';
-          border:2px solid $green;
-          z-index: 0;
-          display: block;
-          position: relative;
-          width: 300px;
-          height: 300px;
-          border-radius: 3px;
-          bottom: 290px;
-          left: 23px;
-        }
-
-        .img{
-      z-index: 2;
-      position: relative;
+  
+    .img-container{
+        width: 324px;
+        margin:auto;
+  
+          &:after{
+            content: '';
+            border:2px solid $green;
+            z-index: 0;
+            display: block;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 3px;
+            bottom: 290px;
+            left: 23px;
+          }
+  
+          .img{
+        z-index: 2;
+        position: relative;
+      }
+  
     }
-
   }
-}
+  
