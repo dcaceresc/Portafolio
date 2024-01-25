@@ -101,6 +101,23 @@
   
       .company {
         color: $green;
+        
+        .inline-link::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+          height: 2px; /* Grosor del subrayado */
+          background-color: $green; /* Color del subrayado */
+          transition: right 0.3s ease-out; /* Duración y tipo de transición */
+        }
+
+        .inline-link:hover::before,
+        .inline-link:focus::before {
+          right: 0;
+        }
+        
       }
     }
   

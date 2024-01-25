@@ -202,43 +202,8 @@ html {
     &:focus {
       color: $green;
     }
-  
-    &.inline-link {
-      display: inline-block;
-    position: relative;
-    color: $green;
-    transition: $transition;
-  
-    &:hover,
-    &:focus-visible {
-      color: $green;
-      outline: 0;
-  
-      &:after {
-        width: 100%;
-      }
-  
-      & > * {
-        color: $green !important;
-        transition: $transition;
-      }
-    }
-  
-    &:after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 1px;
-      position: relative;
-      bottom: 0.37em;
-      background-color: $green;
-      opacity: 0.5;
-  
-      @media (prefers-reduced-motion: no-preference) {
-        transition: transition;
-      }
-    }
-    }
+    
+    
   }
   
   button {
