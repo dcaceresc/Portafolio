@@ -28,14 +28,6 @@ export class JobsComponent {
 
 
 
-  focusTab() {
-    // Implement your logic for focusing tabs here
-  }
-
-  onKeyDown(event: KeyboardEvent) {
-    // Implement your onKeyDown logic here
-  }
-
   setActiveTabId(index: number) {
     this.activeTabId = index;
   }

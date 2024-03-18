@@ -3,6 +3,33 @@
       <h2 class="numbered-heading">
         <span>03.</span> Proyectos
       </h2>
+      
+      <!-- <div class="projects">
+        <ul>
+          @for (project of projects; track $index) {
+            <li>
+              <div class="project-content">
+
+              </div>
+              <div class="project-image">
+                <div>
+                  <p class="project-overline">Featured Project</p>
+                  <h3 class="project-title">{{project.frontmatter.title}}</h3>
+                  <div class="project-description">
+                    <p  [innerHTML]="project.contentHtml"></p>
+                  </div>
+                  <ul class="project-tech-list">
+                    @for (tech of project.frontmatter.tech; track $index) {
+                      <li>{{tech}}</li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </li>
+          }
+        </ul>
+      </div> -->
+
     </div>
   </section>
   

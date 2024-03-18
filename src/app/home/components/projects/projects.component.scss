@@ -1,0 +1,46 @@
+@import '../../../../variables';
+
+.projects{
+    margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 1000px;
+
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+
+        li{
+            position: relative;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(12, 1fr);
+            -moz-box-align: center;
+            align-items: center;
+
+            .project-overline{
+                margin: 10px 0px;
+                color: $green;
+                font-family: $font-mono;
+                font-size: $fz-xs;
+                font-weight: 400;
+            }
+
+            .project-title{
+                color: $lightest-slate;
+                font-size: clamp(24px, 5vw, 28px);
+            }
+
+            .project-tech-list{
+                display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+            margin: 25px 0px 10px;
+            padding: 0px;
+            list-style: none;
+            }
+
+        }
+    }
+}

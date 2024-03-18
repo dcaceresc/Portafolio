@@ -1,7 +1,7 @@
 ---
 title: 'Fake Gundam Wiki API'
 cover: './demo.png'
-github: 'https://github.com/dcaceresc/FakeApiGundam'
+github: 'https://github.com/dcaceresc/FakeGundamWikiAPI'
 external: 'https://fakeapigundam.azurewebsites.net'
 tech:
   - .NET

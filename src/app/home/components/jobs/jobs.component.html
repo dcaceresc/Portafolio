@@ -4,7 +4,7 @@
     </h2>
   
     <div class="inner">
-      <div role="tablist" aria-label="Job tabs" (keydown)="onKeyDown($event)">
+      <div class="d-flex d-none d-md-block"  role="tablist" aria-label="Job tabs">
         @for (job of jobsData; track $index) {
           <button
           class="tab-button"
@@ -20,7 +20,24 @@
           <span>{{ job.frontmatter.company }}</span>
         </button>
         }
-        <div class="highlight" [style.transform]="'translateY(' + activeTabId * 40 + 'px)'"></div>
+      </div>
+
+      <div class="d-flex d-block d-md-none"  role="tablist" aria-label="Job tabs">
+        @for (job of jobsData; track $index) {
+          <button
+          class="tab-button"
+          [class.active]="activeTabId === $index"
+          (click)="setActiveTabId($index)"
+          #tabButton
+          [id]="'tab-' + $index"
+          role="tab"
+          [attr.tabindex]="activeTabId === $index ? '0' : '-1'"
+          [attr.aria-selected]="activeTabId === $index"
+          [attr.aria-controls]="'panel-' + $index"
+        >
+          <span>{{ job.frontmatter.company }}</span>
+        </button>
+        }
       </div>
   
       <div class="tab-panels">

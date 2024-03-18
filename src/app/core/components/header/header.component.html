@@ -1,38 +1,44 @@
-<header>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./../../../../assets/images/logo.png" width="65" />
-        </a>
-  
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">
-              <span>01.</span> Acerca de Mi
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#jobs">
-              <span>02.</span> Experiencia
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">
-              <span>03.</span> Proyectos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">
-              <span>04.</span> Contacto
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link resume-button" (click)="DownloadResume()" href="#">
-              Curriculum
-            </a>
-          </li>
-        </ul>
+   <nav class="navbar navbar-expand-lg  fixed-top" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./../../../../assets/images/logo.png" width="65" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link " href="#about">
+                <span>01.</span> Acerca de Mi
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#jobs">
+                <span>02.</span> Experiencia
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">
+                <span>03.</span> Proyectos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                <span>04.</span> Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link resume-button" (click)="DownloadResume()" href="#">
+                Curriculum
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </nav>
-  </header>
-  
+    </div>
+  </nav>

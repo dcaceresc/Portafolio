@@ -1,6 +1,6 @@
 export const projectNames = [
     {
-      name : 'FakeApiGundam'
+      name : 'FakeGundamWikiAPI'
     },
     {
       name : 'BuscaTuHobby'

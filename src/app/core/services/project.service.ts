@@ -15,7 +15,7 @@ export class ProjectService {
 
   public getProjects() : Observable<Project[]> {
     const projectFiles = projectNames.map((project) =>
-      this.http.get(`assets/content/jobs/${project.name}/index.md`, { responseType: 'text' })
+      this.http.get(`assets/content/projects/${project.name}/index.md`, { responseType: 'text' })
     );
 
     return forkJoin(projectFiles).pipe(

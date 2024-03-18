@@ -1,21 +1,21 @@
 @import './../../../../variables.scss';
 
-header{
-    top:0;
-    padding: 0px 50px;
-    height: $nav-height;
-    width: 100%;
-    position:fixed;
-    transition: $transition;
-  }
-  
-  
   
   nav{
-      position:relative;
       width: 100%;
       color: $lightest-slate;
       font-family: $font-mono;
+      transition: $transition;
+
+      .offcanvas {
+        width: 50%;
+        opacity: 1;
+        background-color: rgba(15,23,42,.5);
+        
+        .show{
+          backdrop-filter: blur(8px);
+        }
+      }
   
       ul{
   
@@ -29,7 +29,7 @@ header{
   
   
           a{
-              color:inherit;
+              color:white;
   
               &:hover{
                 color:$green;
@@ -49,7 +49,9 @@ header{
       }
   }
   
-  
+ 
+  //}
+
   .resume-button{
     color:$green !important;
     background-color: transparent;
