@@ -4,32 +4,32 @@
         <span>03.</span> Proyectos
       </h2>
       
-      <!-- <div class="projects">
-        <ul>
-          @for (project of projects; track $index) {
-            <li>
-              <div class="project-content">
-
-              </div>
-              <div class="project-image">
-                <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">{{project.frontmatter.title}}</h3>
-                  <div class="project-description">
-                    <p  [innerHTML]="project.contentHtml"></p>
-                  </div>
-                  <ul class="project-tech-list">
-                    @for (tech of project.frontmatter.tech; track $index) {
-                      <li>{{tech}}</li>
-                    }
-                  </ul>
+      <ul>
+        @for (project of projects; track $index) {
+          <li>
+            <div class="project-content">
+              <div>
+                <p class="project-overline">Featured Project</p>
+                <h3 class="project-title">{{project.frontmatter.title}}</h3>
+                <div class="project-description" [innerHTML]="project.contentHtml">
                 </div>
+                <!-- <ul class="project-tech-list">
+                  @for (tech of project.frontmatter.tech; track $index) {
+                    <li>{{tech}}</li>
+                  }
+                </ul> -->
               </div>
-            </li>
-          }
-        </ul>
-      </div> -->
+            </div>
+            <div class="project-image">
+              <a href="{{project.frontmatter.slug}}" aria-label="Project Link">
+                <div>
+                  <img src="{{project.frontmatter.image}}" alt="{{project.frontmatter.title}}" width="600" height="350"  />
+                </div>
+              </a>
+            </div>
+          </li>
+        }
+      </ul>
 
     </div>
   </section>
-  
